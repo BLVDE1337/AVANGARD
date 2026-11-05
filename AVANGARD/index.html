@@ -1,0 +1,88 @@
+<!doctype html>
+<!-- Made for AVANGARD by BLADE. -->
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="author" content="BLADE">
+<meta name="theme-color" content="#080607">
+<meta name="description" content="AVANGARD — игровое сообщество с 2019 года.">
+<link rel="icon" type="image/png" href="assets/images/logo.png">
+<title>AVANGARD — Private Community</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="bar"></div><div id="cur" aria-hidden="true"></div><div id="toast" role="status"></div>
+<div id="boot" aria-hidden="true"><img id="bootImg" alt=""><div id="bootTxt"></div></div>
+<header>
+<a class="brand" href="#top"><img id="hdrLogo" width="30" height="30" alt="">AVA<span>NGARD</span></a>
+<nav id="nav"><a href="#about" data-i="n_about"></a><a href="#hall" data-i="n_hall"></a><a href="#music" data-i="n_music"></a><a href="#join" data-i="n_join"></a><a href="#docs" data-i="n_docs"></a></nav>
+<div class="lang" role="group" aria-label="Language"><button data-lang="ru">RU</button><button data-lang="en">EN</button></div>
+<button class="menu" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="Menu">☰</button>
+</header>
+<main id="top">
+<section class="hero"><canvas id="fx" aria-hidden="true"></canvas><div class="hero-in">
+<div class="years" role="tablist" id="years" aria-label="Timeline"></div>
+<div class="motto" id="motto" aria-live="polite"></div>
+<div class="kicker" data-i="kicker"></div>
+<img class="emblem" src="assets/images/logo.png" width="320" height="320" alt="AVANGARD emblem">
+<h1>AVANGARD</h1>
+<p class="tagline" data-i="tagline"></p>
+<div class="actions"><a class="btn" href="https://discord.gg/cRr8Xrmujf" target="_blank" rel="noopener" data-i="cta"></a><a class="btn sec" href="https://steamcommunity.com/groups/AVANGARDprj" target="_blank" rel="noopener">STEAM</a><a class="btn sec" href="https://discord.gg/cRr8Xrmujf" target="_blank" rel="noopener">DISCORD</a></div>
+</div></section>
+
+<section class="stats" aria-label="Stats"><div class="stat"><b data-n="2019">0</b><span data-i="st1"></span></div><div class="stat"><b id="yrs" data-n="7">0</b><span data-i="st2"></span></div><div class="stat"><b id="mc" data-n="6">0</b><span data-i="st3"></span></div></section>
+
+<div class="ticker" aria-hidden="true"><div class="tk"><span></span><span></span></div></div>
+
+<section class="section band" id="about"><div class="wrap">
+<div class="head"><div class="over">WHO WE ARE</div><h2 data-i="n_about"></h2><div class="rule"></div></div>
+<p class="lead" data-i="about"></p>
+<div class="grid3">
+<div class="card"><b>DISCIPLINE</b><span data-i="v1"></span></div>
+<div class="card"><b>UNITY</b><span data-i="v2"></span></div>
+<div class="card"><b>DOMINANCE</b><span data-i="v3"></span></div>
+</div></div></section>
+
+<section class="section" id="hall"><div class="wrap">
+<div class="head"><div class="over">THE INNER CIRCLE</div><h2>HALL OF FAME</h2><div class="rule"></div></div>
+<div id="hof"></div>
+</div></section>
+
+<section class="section" id="music"><div class="wrap">
+<div class="head"><div class="over">NOW PLAYING</div><h2 data-i="n_music"></h2><div class="rule"></div></div>
+<div class="player" id="player">
+<div class="disc"><img id="plLogo" alt=""></div>
+<div class="pl-main">
+<div class="pl-meta"><b>castles</b><span>BLADE</span></div>
+<div class="eq" aria-hidden="true"></div>
+<div class="pl-ctl"><button class="pbtn" id="pPlay" aria-label="Play">▶</button><span id="pCur">0:00</span><input id="pSeek" type="range" min="0" max="1000" value="0" aria-label="Seek"><span id="pDur">0:00</span><button class="mbtn" id="pMute" aria-label="Mute">♪</button><input id="pVol" type="range" min="0" max="100" value="80" aria-label="Volume"></div>
+</div>
+<audio id="aud" preload="metadata" src="assets/audio/castles.mp3"></audio>
+</div></div></section>
+
+<section class="section band" id="join"><div class="wrap">
+<div class="head"><div class="over">JOIN</div><h2 data-i="n_join"></h2><div class="rule"></div></div>
+<div class="grid3 steps">
+<div class="card step"><b data-i="s1t"></b><span data-i="s1"></span></div>
+<div class="card step"><b data-i="s2t"></b><span data-i="s2"></span></div>
+<div class="card step"><b data-i="s3t"></b><span data-i="s3"></span></div>
+</div>
+<p style="text-align:center;margin-top:34px"><a class="btn" href="https://discord.gg/cRr8Xrmujf" target="_blank" rel="noopener" data-i="cta"></a></p>
+</div></section>
+
+<section class="section" id="docs"><div class="wrap">
+<div class="head"><div class="over">INFORMATION &amp; POLICIES</div><h2 data-i="n_docs"></h2><div class="rule"></div></div>
+<div class="grid3 docs" id="docList"></div>
+</div></section>
+</main>
+<footer><span>© AVANGARD 2026</span><span>EST. 2019</span><a href="#top" data-i="top"></a></footer>
+
+<dialog id="modal" aria-labelledby="docTitle"><button class="x" id="closeBtn" aria-label="Close">✕</button><h3 id="docTitle"></h3><div id="docBody"></div></dialog>
+
+<script src="script.js" defer></script>
+</body>
+</html>
